@@ -1,0 +1,83 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    padding:0;
+    margin:0;
+    font-family: 'Public Sans', sans-serif;
+    color:$white;
+    background-color: $VeryDarkBlue;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 375px;
+    margin:0 auto;
+
+    &--py{
+        padding-top:4.375rem;;
+        padding-bottom:4.375rem;
+
+        @include breakpoint-up(large){
+            padding-top:6rem;
+            padding-bottom:6rem;
+        }
+    }
+    &--px{
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+    }
+
+
+}
+
+.flex{
+    display:flex;
+
+    &-jc-sb{
+        justify-content: space-between;  
+    }
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+
+    &-jc-sb{
+        justify-content:space-between;
+    }
+
+}
+
+
+.grid{
+    display:grid;
+
+    &-gt-c{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-jc-c{
+        justify-content:center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+
+    &-pi-c{
+        place-items: center;
+    }
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+}
+
