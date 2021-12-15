@@ -1,227 +1,55 @@
-// .card{
-//     margin:3.125rem 1.25rem;
-
-   
-
-//     // 
-
-//     &__test{
-//         background-color: $darkBlue;
-//         border-radius: 1.25rem;
-
-
-//         @include breakpoint-up(large){
-//             grid-area:profile;
-            
-//         }
-//     }
-
-
-//     &__image{
-//         height: 5rem;
-//         border: 0.125rem white solid;
-//         ;
-//         border-radius: 50%;
-//     }
-
-
-//     &__detail{
-//         background:$blue;
-//         border-radius: 1.25rem;
-//         padding:2.875rem 0rem;
-        
-//     }
-
-//     &__info{
-//         margin-left:1.25rem;
-
-        
-//         >.card__info1{
-//             color: $PaleBlue;
-//             margin-bottom:0.625rem;
-//         }
-
-
-//         >.card__info2{
-//             color: $white;
-//             font-size:25px;
-//         }
-
-//     }
-
-
-//     &__menu{
-//         padding:2rem;
-
-//         >div {
-//             margin-left:1.25rem;
-//         }
-//         > div:first-child{
-//             color:$PaleBlue;
-//         }
-
-//         > div:nth-child(2){
-//             color:$white;
-//         }
-
-//         > div:last-child{
-//             color:$PaleBlue;
-//         }
-//     }
-
-
-//     &__list{
-//         background: $lightRedWork;
-//         border-radius: 1.25rem;
-        
-
-//         margin-top: 2.5rem;
-//         // @include breakpoint-up(large){
-//         // grid-area: link1;
-//         //     }
-//     }
-
-//     &__list1{
-//         background: $softBlue;
-//         border-radius: 1.25rem;
-
-//         margin-top: 2.5rem;
-//         @include breakpoint-up(large){
-//             grid-area: link2;
-//                 }
-//     }
-
-//     &__list3{
-//         background: $lightRed;
-//         border-radius: 1.25rem;
-
-//         margin-top: 2.5rem;
-//         @include breakpoint-up(large){
-//             grid-area: link3;
-//                 }
-//     }
-
-//     &__list4{
-//         background: $limeGreen;
-//         border-radius: 1.25rem;
-
-//         margin-top: 2.5rem;
-
-//         @include breakpoint-up(large){
-//             grid-area: link4;
-//                 }
-//     }
-
-//     &__list5{
-//         background: $violet;
-//         border-radius: 1.25rem;
-
-//         margin-top: 2.5rem;
-
-//         @include breakpoint-up(large){
-//             grid-area: link5;
-//                 }
-//     }
-
-//     &__list6{
-//         background: $softOrange;
-//         border-radius: 1.25rem;
-
-//         margin-top: 2.5rem;
-
-//         @include breakpoint-up(large){
-//             grid-area: link6;
-//                 }
-//     }
-
-
-//     &__itemContainer{
-//         background:$darkBlue;
-//         border-radius: 1.25rem;
-//         padding:2.5rem;
-//     }
-    
-//     &__item2{
-//        color:$white;
-//        margin-bottom: 1.25rem;
-//        font-size:1.5625rem
-
-//     }
-//     &__item3{
-//         color:$white;
-//         font-size:1rem
-//     }
-
-//    &__img{
-//        background:url('/images/icon-work.svg');
-//        width: 100%;
-//        height:2.8125rem;
-//        background-repeat: no-repeat;
-//        background-origin: cover;
-//        background-position: left 92% bottom -2rem;
-     
-//     } 
-
-//     &__img1{
-//         background:url('/images/icon-play.svg');
-//         width: 100%;
-//         height:2.8125rem;
-//         background-repeat: no-repeat;
-//         background-origin: cover;
-//         background-position: left 92% bottom -2rem;
-//      } 
-
-
-//      &__img2{
-//         background:url('/images/icon-study.svg');
-//         width: 100%;
-//         height:2.8125rem;
-//         background-repeat: no-repeat;
-//         background-origin: cover;
-//         background-position: left 92% bottom -2rem;
-//      } 
-
-
-//      &__img3{
-//         background:url('/images/icon-exercise.svg');
-//         width: 100%;
-//         height:2.8125rem;
-//         background-repeat: no-repeat;
-//         background-origin: cover;
-//         background-position: left 92% bottom -1rem;
-//      } 
-
-//      &__img4{
-//         background:url('/images/icon-social.svg');
-//         width: 100%;
-//         height:2.8125rem;
-//         background-repeat: no-repeat;
-//         background-origin: cover;
-//         background-position: left 92% bottom -2rem;
-//      } 
-
-
-//      &__img5{
-//         background:url('/images/icon-self-care.svg');
-//         width: 100%;
-//         height:2.8125rem;
-//         background-repeat: no-repeat;
-//         background-origin: cover;
-//         background-position: left 92% bottom -1rem;
-//      } 
-
-
-// }
-
-
 .section{
 
     width: 80%;
     margin: 0 auto;
 
+    .container{
+        
+        @include breakpoint-down(medium){
+            display:grid;
+
+            grid-template-columns:2fr 2fr;
+            grid-template-areas:'profile profile'
+            'card1 card2'
+            'card3 card4'
+            'card5 card6';
+            grid-gap:1rem;
+        }  
+        
+        @include breakpoint-down(small){
+            display:block;
+            }
+
+    
+        @include breakpoint-up(large){
+       
+        padding:150px;
+        display:grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-gap: 0.5rem;
+        align-items:start;
+        justify-content:center;
+
+
+        grid-template-areas: 'profile card1 card2 card3 '
+        'profile card4 card5 card6';
+        }
+    }
+
     &__card{
         background: $darkBlue; 
         border-radius: 30px;
+        
+        @include breakpoint-down(medium){
+            grid-area:profile;
+        }
+
+
+        @include breakpoint-up(large){
+            grid-area:profile;
+            margin-top:20px;
+            border-radius: 10px;
+        }
 
         .detail{
             display: flex; 
@@ -230,6 +58,17 @@
             padding:2rem;
             background: $blue;
             border-radius: 20px;
+
+            @include breakpoint-up(large){
+                padding:4rem 2.7rem;
+                display:block;
+                
+            }
+
+            @include breakpoint-down(medium){
+                padding:1.5rem 1rem;      
+            }
+    
 
             >div{
                 margin-right: 20px;
@@ -241,6 +80,13 @@
                 border-radius: 50%;
                 width: 30%;
                 height:30%;
+
+                @include breakpoint-up(large){
+                    width: 60%;
+                    
+                }
+    
+                
             }
 
             .info{
@@ -248,14 +94,27 @@
                 font-family: monospace;
                 margin-left: 20px;
 
+                @include breakpoint-up(large){
+                    margin-left: 0;
+                    margin-top:10px;
+                }
+
                 > div:first-child{
                     color: $PaleBlue;
                     font-size: 12px;
                     margin-bottom: 7px;
+
+                    @include breakpoint-up(large){
+                        font-size: 12px;
+                    }
                 }
 
                 > div:last-child{
                     font-size: 17px;
+
+                    @include breakpoint-up(large){
+                        font-size: 25px;
+                    }
                 }
             
             
@@ -268,9 +127,22 @@
             grid-template-columns: repeat(3, 1fr);
             font-family: monospace;
             font-size: 20px;
+
+            
+            @include breakpoint-up(large){
+                display:inline;
+                
+            }
             
             div{
               margin-left: 1rem;
+              
+            @include breakpoint-up(large){
+                margin-top:10px;
+                font-size: 11px;
+
+            }
+
             }
 
             > div:first-child{
@@ -294,13 +166,26 @@
        background:$lightRedWork;
        border-radius: 17px;
 
+       @include breakpoint-up(medium){
+        grid-area:card1;
+        }
+
+
+       @include breakpoint-up(large){
+        grid-area:card1;
         
+    }
+    
         .image{
             
             background-image: url(/images/icon-work.svg);
             height:2.8125rem;
             background-repeat: no-repeat;
             background-position: left 93% bottom -1.5rem;
+
+            @include breakpoint-up(large){
+                height:2.1125rem;
+            }
 
         }
 
@@ -312,15 +197,31 @@
             font-size: 15px;
             font-weight: 500;
 
+            @include breakpoint-up(large){
+                padding: 2rem 5.4rem;
+             }
+ 
+
             .work{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
 
+                @include breakpoint-up(large){
+                    margin-bottom:20px;
+                }
+                
+
+
                 > div:first-child{
                     font-size: 20px;
                     font-weight: bolder;
                     margin-left: -35px;
+
+                    @include breakpoint-up(large){
+                        font-size: 15px;
+                        font-weight:200;  
+                    }
                 }
 
                 >div:last-child{
@@ -335,6 +236,10 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 15px;
+
+                @include breakpoint-up(large){
+                    display:inline;
+                }
                 
 
                 >div:first-child{
@@ -346,6 +251,14 @@
                 >div:last-child{
                     margin-right: -45px;
                     color:$PaleBlue;
+
+                    @include breakpoint-up(large){
+                       font-size:10px;
+                       margin-left:-35px;
+                       margin-top:10px;
+                    }
+                
+                    
                 }
 
             }
@@ -359,6 +272,15 @@
         margin-top: 20px;
         background:$softBlue;
         border-radius: 17px;
+
+
+        @include breakpoint-down(medium){
+            grid-area:card2;
+            }
+            
+        @include breakpoint-up(large){
+            grid-area:card2;
+        }
  
          
          .image{
@@ -367,6 +289,10 @@
              height:2.8125rem;
              background-repeat: no-repeat;
              background-position: left 93% bottom -1.5rem;
+
+             @include breakpoint-up(large){
+                height:2.1125rem;
+            }
  
          }
  
@@ -377,45 +303,74 @@
              font-family: monospace;
              font-size: 15px;
              font-weight: 500;
+
+                 @include breakpoint-up(large){
+                padding: 1.9rem 4.5rem;
+             }
+ 
  
              .work{
                  display: flex;
                  justify-content: space-between;
                  align-items: center;
+
+                 @include breakpoint-up(large){
+                     margin-bottom:20px;
+                 }
+                 
  
                  > div:first-child{
                      font-size: 20px;
                      font-weight: bolder;
                      margin-left: -35px;
+
+                     @include breakpoint-up(large){
+                        font-size: 15px;
+                        font-weight:200; 
+                     
+                    }
                  }
  
                  >div:last-child{
                      margin-right: -45px;
+                    
                  }
  
              }
  
              .hours{
- 
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 margin-top: 15px;
-                 
- 
-                 >div:first-child{
-                     font-size: 25px;
-                     font-weight: 400;
-                     margin-left: -35px;
-                 }
- 
-                 >div:last-child{
-                     margin-right: -45px;
-                     color:$PaleBlue;
-                 }
- 
-             }
- 
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 15px;
+
+                @include breakpoint-up(large){
+                    display:inline;
+                    
+                }
+                
+
+                >div:first-child{
+                    font-size: 25px;
+                    font-weight: 400;
+                    margin-left: -35px;
+                }
+
+                >div:last-child{
+                    margin-right: -45px;
+                    color:$PaleBlue;
+
+                    @include breakpoint-up(large){
+                       font-size:10px;
+                       margin-left:-30px;
+                       margin-top:10px;
+                    }
+                
+                    
+                }
+
+            }
          }
          
      }
@@ -425,6 +380,14 @@
         margin-top: 20px;
         background:$lightRed;
         border-radius: 17px;
+
+        @include breakpoint-down(medium){
+            grid-area:card3;
+            }
+
+        @include breakpoint-up(large){
+            grid-area:card3;
+        }
  
          
          .image{
@@ -433,6 +396,10 @@
              height:2.8125rem;
              background-repeat: no-repeat;
              background-position: left 93% bottom -1.5rem;
+
+             @include breakpoint-up(large){
+                height:2.1125rem;
+            }
  
          }
  
@@ -443,16 +410,30 @@
              font-family: monospace;
              font-size: 15px;
              font-weight: 500;
+
+             @include breakpoint-down(medium){
+                padding: 2.2rem 3.5rem;
+                }
  
              .work{
                  display: flex;
                  justify-content: space-between;
                  align-items: center;
+
+                 @include breakpoint-up(large){
+                    margin-bottom:20px;
+                }
+                
  
                  > div:first-child{
                      font-size: 20px;
                      font-weight: bolder;
                      margin-left: -35px;
+
+                     @include breakpoint-up(large){
+                        font-size: 15px;
+                        font-weight:200;  
+                    }
                  }
  
                  >div:last-child{
@@ -462,25 +443,37 @@
              }
  
              .hours{
- 
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 margin-top: 15px;
-                 
- 
-                 >div:first-child{
-                     font-size: 25px;
-                     font-weight: 400;
-                     margin-left: -35px;
-                 }
- 
-                 >div:last-child{
-                     margin-right: -45px;
-                     color:$PaleBlue;
-                 }
- 
-             }
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 15px;
+
+                @include breakpoint-up(large){
+                    display:inline;
+                }
+                
+
+                >div:first-child{
+                    font-size: 25px;
+                    font-weight: 400;
+                    margin-left: -35px;
+                }
+
+                >div:last-child{
+                    margin-right: -45px;
+                    color:$PaleBlue;
+
+                    @include breakpoint-up(large){
+                       font-size:10px;
+                       margin-left:-35px;
+                       margin-top:10px;
+                    }
+                
+                    
+                }
+
+            }
  
          }
          
@@ -491,6 +484,19 @@
         margin-top: 20px;
         background:$limeGreen;
         border-radius: 17px;
+
+
+        @include breakpoint-down(medium){
+            grid-area:card4;
+            }
+
+            @include breakpoint-down(small){
+                
+                }
+
+            @include breakpoint-up(large){
+                grid-area:card4;
+            }
  
          
          .image{
@@ -499,6 +505,10 @@
              height:2.7125rem;
              background-repeat: no-repeat;
              background-position: left 93% bottom -0.65rem;
+
+             @include breakpoint-up(large){
+                height:2.1125rem;
+            }
  
          }
  
@@ -509,16 +519,32 @@
              font-family: monospace;
              font-size: 15px;
              font-weight: 500;
+
+
+             @include breakpoint-down(medium){
+                padding: 2.2rem 3.5rem;
+                }
+
  
              .work{
                  display: flex;
                  justify-content: space-between;
                  align-items: center;
+
+                 @include breakpoint-up(large){
+                    margin-bottom:20px;
+                }
+                
  
                  > div:first-child{
                      font-size: 20px;
                      font-weight: bolder;
                      margin-left: -35px;
+
+                     @include breakpoint-up(large){
+                        font-size: 15px;
+                        font-weight:200;  
+                    }
                  }
  
                  >div:last-child{
@@ -528,25 +554,37 @@
              }
  
              .hours{
- 
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 margin-top: 15px;
-                 
- 
-                 >div:first-child{
-                     font-size: 25px;
-                     font-weight: 400;
-                     margin-left: -35px;
-                 }
- 
-                 >div:last-child{
-                     margin-right: -45px;
-                     color:$PaleBlue;
-                 }
- 
-             }
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 15px;
+
+                @include breakpoint-up(large){
+                    display:inline;
+                }
+                
+
+                >div:first-child{
+                    font-size: 25px;
+                    font-weight: 400;
+                    margin-left: -35px;
+                }
+
+                >div:last-child{
+                    margin-right: -45px;
+                    color:$PaleBlue;
+
+                    @include breakpoint-up(large){
+                       font-size:10px;
+                       margin-left:-35px;
+                       margin-top:10px;
+                    }
+                
+                    
+                }
+
+            }
  
          }
          
@@ -557,6 +595,14 @@
         margin-top: 20px;
         background:$violet;
         border-radius: 17px;
+
+        @include breakpoint-up(medium){
+            grid-area:card5;
+            }
+
+        @include breakpoint-up(large){
+            grid-area:card5;
+        }
  
          
          .image{
@@ -565,6 +611,10 @@
              height:2.7125rem;
              background-repeat: no-repeat;
              background-position: left 93% bottom -1.5rem;
+
+             @include breakpoint-up(large){
+                height:2.1125rem;
+            }
  
          }
  
@@ -580,11 +630,21 @@
                  display: flex;
                  justify-content: space-between;
                  align-items: center;
+
+                 @include breakpoint-up(large){
+                    margin-bottom:20px;
+                }
+                
  
                  > div:first-child{
                      font-size: 20px;
                      font-weight: bolder;
                      margin-left: -35px;
+
+                     @include breakpoint-up(large){
+                        font-size: 15px;
+                        font-weight:200;  
+                    }
                  }
  
                  >div:last-child{
@@ -594,25 +654,39 @@
              }
  
              .hours{
- 
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 margin-top: 15px;
-                 
- 
-                 >div:first-child{
-                     font-size: 25px;
-                     font-weight: 400;
-                     margin-left: -35px;
-                 }
- 
-                 >div:last-child{
-                     margin-right: -45px;
-                     color:$PaleBlue;
-                 }
- 
-             }
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 15px;
+
+                @include breakpoint-up(large){
+                    display:inline;
+                }
+                
+
+                >div:first-child{
+                    font-size: 25px;
+                    font-weight: 400;
+                    margin-left: -35px;
+
+                    
+                }
+
+                >div:last-child{
+                    margin-right: -45px;
+                    color:$PaleBlue;
+
+                    @include breakpoint-up(large){
+                       font-size:10px;
+                       margin-left:-35px;
+                       margin-top:10px;
+                    }
+                
+                    
+                }
+
+            }
  
          }
          
@@ -624,6 +698,14 @@
         margin-top: 20px;
         background:$softOrange;
         border-radius: 17px;
+
+        @include breakpoint-up(medium){
+            grid-area:card6;
+            }
+
+        @include breakpoint-up(large){
+            grid-area:card6;
+        }
  
          
          .image{
@@ -632,6 +714,10 @@
              height:2.7125rem;
              background-repeat: no-repeat;
              background-position: left 93% bottom -1.5rem;
+
+             @include breakpoint-up(large){
+                height:2.1125rem;
+            }
  
          }
  
@@ -640,18 +726,33 @@
              border-radius: 15px;
              padding: 2rem 3.5rem;
              font-family: monospace;
-             font-size: 15px;
+             font-size: 13px;
              font-weight: 500;
+
+             @include breakpoint-up(large){
+                padding: 2rem 5.4rem;
+             }
  
              .work{
                  display: flex;
                  justify-content: space-between;
                  align-items: center;
+
+                 @include breakpoint-up(large){
+                    margin-bottom:20px;
+                }
+                
  
                  > div:first-child{
                      font-size: 20px;
                      font-weight: bolder;
-                     margin-left: -35px;
+                     margin-left: -45px;
+
+                     @include breakpoint-up(large){
+                        font-size: 15px;
+                        font-weight:200;  
+                    }
+
                  }
  
                  >div:last-child{
@@ -661,32 +762,40 @@
              }
  
              .hours{
- 
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 margin-top: 15px;
-                 
- 
-                 >div:first-child{
-                     font-size: 25px;
-                     font-weight: 400;
-                     margin-left: -35px;
-                 }
- 
-                 >div:last-child{
-                     margin-right: -45px;
-                     color:$PaleBlue;
-                 }
- 
-             }
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 15px;
+
+                @include breakpoint-up(large){
+                    display:inline;
+                }
+                
+
+                >div:first-child{
+                    font-size: 25px;
+                    font-weight: 400;
+                    margin-left: -35px;
+                }
+
+                >div:last-child{
+                    margin-right: -45px;
+                    color:$PaleBlue;
+
+                    @include breakpoint-up(large){
+                       font-size:10px;
+                       margin-left:-35px;
+                       margin-top:10px;
+                    }
+                
+                    
+                }
+
+            }
  
          }
          
      }
 
-
-
-
 }
-
