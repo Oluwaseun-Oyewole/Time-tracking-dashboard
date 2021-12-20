@@ -37,24 +37,14 @@ body {
 }
 
 .section {
-  width: 80%;
+  width: 92%;
+  max-width: 500px;
   margin: 0 auto;
 }
 
-@media (max-width: 63.9375em) {
-  .section .container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 2fr 2fr;
-        grid-template-columns: 2fr 2fr;
-        grid-template-areas: 'profile profile' 'card1 card2' 'card3 card4' 'card5 card6';
-    grid-gap: 1rem;
-  }
-}
-
-@media (max-width: 39.9375em) {
-  .section .container {
-    display: block;
+@media (min-width: 64em) {
+  .section {
+    width: 100%;
   }
 }
 
@@ -81,12 +71,6 @@ body {
   border-radius: 30px;
 }
 
-@media (max-width: 63.9375em) {
-  .section__card {
-    grid-area: profile;
-  }
-}
-
 @media (min-width: 64em) {
   .section__card {
     grid-area: profile;
@@ -109,14 +93,8 @@ body {
 
 @media (min-width: 64em) {
   .section__card .detail {
-    padding: 4rem 2.7rem;
+    padding: 4rem 2.9rem;
     display: block;
-  }
-}
-
-@media (max-width: 63.9375em) {
-  .section__card .detail {
-    padding: 1.5rem 1rem;
   }
 }
 
@@ -179,17 +157,18 @@ body {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   font-family: monospace;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 @media (min-width: 64em) {
   .section__card .menu {
     display: inline;
+    font-size: 20px;
   }
 }
 
 .section__card .menu div {
-  margin-left: 1rem;
+  margin-left: 0.4rem;
 }
 
 @media (min-width: 64em) {
@@ -217,12 +196,6 @@ body {
   border-radius: 17px;
 }
 
-@media (min-width: 40em) {
-  .section__card1 {
-    grid-area: card1;
-  }
-}
-
 @media (min-width: 64em) {
   .section__card1 {
     grid-area: card1;
@@ -245,7 +218,7 @@ body {
 .section__card1 .detail {
   background: #1c1f4a;
   border-radius: 15px;
-  padding: 2rem 3.5rem;
+  padding: 2rem 3rem;
   font-family: monospace;
   font-size: 15px;
   font-weight: 500;
@@ -253,7 +226,7 @@ body {
 
 @media (min-width: 64em) {
   .section__card1 .detail {
-    padding: 2rem 5.4rem;
+    padding: 2rem 4.5rem;
   }
 }
 
@@ -336,12 +309,6 @@ body {
   border-radius: 17px;
 }
 
-@media (max-width: 63.9375em) {
-  .section__card2 {
-    grid-area: card2;
-  }
-}
-
 @media (min-width: 64em) {
   .section__card2 {
     grid-area: card2;
@@ -364,7 +331,7 @@ body {
 .section__card2 .detail {
   background: #1c1f4a;
   border-radius: 15px;
-  padding: 2rem 3.5rem;
+  padding: 2rem 3rem;
   font-family: monospace;
   font-size: 15px;
   font-weight: 500;
@@ -372,7 +339,7 @@ body {
 
 @media (min-width: 64em) {
   .section__card2 .detail {
-    padding: 1.9rem 4.5rem;
+    padding: 2rem 4.5rem;
   }
 }
 
@@ -444,7 +411,7 @@ body {
 @media (min-width: 64em) {
   .section__card2 .detail .hours > div:last-child {
     font-size: 10px;
-    margin-left: -30px;
+    margin-left: -35px;
     margin-top: 10px;
   }
 }
@@ -453,12 +420,6 @@ body {
   margin-top: 20px;
   background: #ff5c7c;
   border-radius: 17px;
-}
-
-@media (max-width: 63.9375em) {
-  .section__card3 {
-    grid-area: card3;
-  }
 }
 
 @media (min-width: 64em) {
@@ -483,15 +444,15 @@ body {
 .section__card3 .detail {
   background: #1c1f4a;
   border-radius: 15px;
-  padding: 2rem 3.5rem;
+  padding: 2rem 3rem;
   font-family: monospace;
   font-size: 15px;
   font-weight: 500;
 }
 
-@media (max-width: 63.9375em) {
+@media (min-width: 64em) {
   .section__card3 .detail {
-    padding: 2.2rem 3.5rem;
+    padding: 2rem 4.5rem;
   }
 }
 
@@ -574,12 +535,6 @@ body {
   border-radius: 17px;
 }
 
-@media (max-width: 63.9375em) {
-  .section__card4 {
-    grid-area: card4;
-  }
-}
-
 @media (min-width: 64em) {
   .section__card4 {
     grid-area: card4;
@@ -602,15 +557,15 @@ body {
 .section__card4 .detail {
   background: #1c1f4a;
   border-radius: 15px;
-  padding: 2rem 3.5rem;
+  padding: 2rem 3rem;
   font-family: monospace;
   font-size: 15px;
   font-weight: 500;
 }
 
-@media (max-width: 63.9375em) {
+@media (min-width: 64em) {
   .section__card4 .detail {
-    padding: 2.2rem 3.5rem;
+    padding: 2rem 4.5rem;
   }
 }
 
@@ -693,12 +648,6 @@ body {
   border-radius: 17px;
 }
 
-@media (min-width: 40em) {
-  .section__card5 {
-    grid-area: card5;
-  }
-}
-
 @media (min-width: 64em) {
   .section__card5 {
     grid-area: card5;
@@ -721,10 +670,16 @@ body {
 .section__card5 .detail {
   background: #1c1f4a;
   border-radius: 15px;
-  padding: 2rem 3.5rem;
+  padding: 2rem 3rem;
   font-family: monospace;
   font-size: 15px;
   font-weight: 500;
+}
+
+@media (min-width: 64em) {
+  .section__card5 .detail {
+    padding: 2rem 4.5rem;
+  }
 }
 
 .section__card5 .detail .work {
@@ -806,12 +761,6 @@ body {
   border-radius: 17px;
 }
 
-@media (min-width: 40em) {
-  .section__card6 {
-    grid-area: card6;
-  }
-}
-
 @media (min-width: 64em) {
   .section__card6 {
     grid-area: card6;
@@ -834,15 +783,15 @@ body {
 .section__card6 .detail {
   background: #1c1f4a;
   border-radius: 15px;
-  padding: 2rem 3.5rem;
+  padding: 2rem 3rem;
   font-family: monospace;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
 }
 
 @media (min-width: 64em) {
   .section__card6 .detail {
-    padding: 2rem 5.4rem;
+    padding: 2rem 4.5rem;
   }
 }
 
@@ -865,7 +814,7 @@ body {
 }
 
 .section__card6 .detail .work > div:first-child {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bolder;
   margin-left: -45px;
 }
@@ -878,7 +827,7 @@ body {
 }
 
 .section__card6 .detail .work > div:last-child {
-  margin-right: -45px;
+  margin-right: -65px;
 }
 
 .section__card6 .detail .hours {

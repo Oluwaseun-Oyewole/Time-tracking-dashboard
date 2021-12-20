@@ -1,26 +1,17 @@
 .section{
 
-    width: 80%;
+    width:92%;
+    max-width:500px;
     margin: 0 auto;
 
-    .container{
-        
-        @include breakpoint-down(medium){
-            display:grid;
+    @include breakpoint-up(large){
+        width:100%;
+        // max-width:2440px;
+        // max-width:500px;
+        // margin: 0 auto;
+    }
 
-            grid-template-columns:2fr 2fr;
-            grid-template-areas:'profile profile'
-            'card1 card2'
-            'card3 card4'
-            'card5 card6';
-            grid-gap:1rem;
-        }  
-        
-        @include breakpoint-down(small){
-            display:block;
-            }
-
-    
+    .container{   
         @include breakpoint-up(large){
        
         padding:150px;
@@ -40,10 +31,6 @@
         background: $darkBlue; 
         border-radius: 30px;
         
-        @include breakpoint-down(medium){
-            grid-area:profile;
-        }
-
 
         @include breakpoint-up(large){
             grid-area:profile;
@@ -60,15 +47,11 @@
             border-radius: 20px;
 
             @include breakpoint-up(large){
-                padding:4rem 2.7rem;
+                padding:4rem 2.9rem;
                 display:block;
                 
             }
 
-            @include breakpoint-down(medium){
-                padding:1.5rem 1rem;      
-            }
-    
 
             >div{
                 margin-right: 20px;
@@ -126,16 +109,17 @@
             display:grid;
             grid-template-columns: repeat(3, 1fr);
             font-family: monospace;
-            font-size: 20px;
+            font-size: 15px;
 
             
             @include breakpoint-up(large){
                 display:inline;
+                font-size: 20px;
                 
             }
             
             div{
-              margin-left: 1rem;
+              margin-left: 0.4rem;
               
             @include breakpoint-up(large){
                 margin-top:10px;
@@ -166,10 +150,6 @@
        background:$lightRedWork;
        border-radius: 17px;
 
-       @include breakpoint-up(medium){
-        grid-area:card1;
-        }
-
 
        @include breakpoint-up(large){
         grid-area:card1;
@@ -192,13 +172,13 @@
         .detail{
             background: $darkBlue;
             border-radius: 15px;
-            padding: 2rem 3.5rem;
+            padding: 2rem 3rem;
             font-family: monospace;
             font-size: 15px;
             font-weight: 500;
 
             @include breakpoint-up(large){
-                padding: 2rem 5.4rem;
+                padding: 2rem 4.5rem;
              }
  
 
@@ -274,10 +254,6 @@
         border-radius: 17px;
 
 
-        @include breakpoint-down(medium){
-            grid-area:card2;
-            }
-            
         @include breakpoint-up(large){
             grid-area:card2;
         }
@@ -297,48 +273,47 @@
          }
  
          .detail{
-             background: $darkBlue;
-             border-radius: 15px;
-             padding: 2rem 3.5rem;
-             font-family: monospace;
-             font-size: 15px;
-             font-weight: 500;
+            background: $darkBlue;
+            border-radius: 15px;
+            padding: 2rem 3rem;
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: 500;
 
-                 @include breakpoint-up(large){
-                padding: 1.9rem 4.5rem;
+            @include breakpoint-up(large){
+                padding: 2rem 4.5rem;
              }
  
- 
-             .work{
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
 
-                 @include breakpoint-up(large){
-                     margin-bottom:20px;
-                 }
-                 
- 
-                 > div:first-child{
-                     font-size: 20px;
-                     font-weight: bolder;
-                     margin-left: -35px;
+            .work{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-                     @include breakpoint-up(large){
+                @include breakpoint-up(large){
+                    margin-bottom:20px;
+                }
+                
+
+
+                > div:first-child{
+                    font-size: 20px;
+                    font-weight: bolder;
+                    margin-left: -35px;
+
+                    @include breakpoint-up(large){
                         font-size: 15px;
-                        font-weight:200; 
-                     
+                        font-weight:200;  
                     }
-                 }
- 
-                 >div:last-child{
-                     margin-right: -45px;
-                    
-                 }
- 
-             }
- 
-             .hours{
+                }
+
+                >div:last-child{
+                    margin-right: -45px;
+                }
+
+            }
+
+            .hours{
 
                 display: flex;
                 justify-content: space-between;
@@ -347,7 +322,6 @@
 
                 @include breakpoint-up(large){
                     display:inline;
-                    
                 }
                 
 
@@ -363,7 +337,7 @@
 
                     @include breakpoint-up(large){
                        font-size:10px;
-                       margin-left:-30px;
+                       margin-left:-35px;
                        margin-top:10px;
                     }
                 
@@ -371,7 +345,8 @@
                 }
 
             }
-         }
+
+        }
          
      }
 
@@ -381,9 +356,6 @@
         background:$lightRed;
         border-radius: 17px;
 
-        @include breakpoint-down(medium){
-            grid-area:card3;
-            }
 
         @include breakpoint-up(large){
             grid-area:card3;
@@ -404,45 +376,47 @@
          }
  
          .detail{
-             background: $darkBlue;
-             border-radius: 15px;
-             padding: 2rem 3.5rem;
-             font-family: monospace;
-             font-size: 15px;
-             font-weight: 500;
+            background: $darkBlue;
+            border-radius: 15px;
+            padding: 2rem 3rem;
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: 500;
 
-             @include breakpoint-down(medium){
-                padding: 2.2rem 3.5rem;
-                }
+            @include breakpoint-up(large){
+                padding: 2rem 4.5rem;
+             }
  
-             .work{
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
 
-                 @include breakpoint-up(large){
+            .work{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @include breakpoint-up(large){
                     margin-bottom:20px;
                 }
                 
- 
-                 > div:first-child{
-                     font-size: 20px;
-                     font-weight: bolder;
-                     margin-left: -35px;
 
-                     @include breakpoint-up(large){
+
+                > div:first-child{
+                    font-size: 20px;
+                    font-weight: bolder;
+                    margin-left: -35px;
+
+                    @include breakpoint-up(large){
                         font-size: 15px;
                         font-weight:200;  
                     }
-                 }
- 
-                 >div:last-child{
-                     margin-right: -45px;
-                 }
- 
-             }
- 
-             .hours{
+                }
+
+                >div:last-child{
+                    margin-right: -45px;
+                }
+
+            }
+
+            .hours{
 
                 display: flex;
                 justify-content: space-between;
@@ -474,8 +448,8 @@
                 }
 
             }
- 
-         }
+
+        }
          
      }
 
@@ -485,14 +459,6 @@
         background:$limeGreen;
         border-radius: 17px;
 
-
-        @include breakpoint-down(medium){
-            grid-area:card4;
-            }
-
-            @include breakpoint-down(small){
-                
-                }
 
             @include breakpoint-up(large){
                 grid-area:card4;
@@ -513,47 +479,47 @@
          }
  
          .detail{
-             background: $darkBlue;
-             border-radius: 15px;
-             padding: 2rem 3.5rem;
-             font-family: monospace;
-             font-size: 15px;
-             font-weight: 500;
+            background: $darkBlue;
+            border-radius: 15px;
+            padding: 2rem 3rem;
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: 500;
 
-
-             @include breakpoint-down(medium){
-                padding: 2.2rem 3.5rem;
-                }
-
+            @include breakpoint-up(large){
+                padding: 2rem 4.5rem;
+             }
  
-             .work{
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
 
-                 @include breakpoint-up(large){
+            .work{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @include breakpoint-up(large){
                     margin-bottom:20px;
                 }
                 
- 
-                 > div:first-child{
-                     font-size: 20px;
-                     font-weight: bolder;
-                     margin-left: -35px;
 
-                     @include breakpoint-up(large){
+
+                > div:first-child{
+                    font-size: 20px;
+                    font-weight: bolder;
+                    margin-left: -35px;
+
+                    @include breakpoint-up(large){
                         font-size: 15px;
                         font-weight:200;  
                     }
-                 }
- 
-                 >div:last-child{
-                     margin-right: -45px;
-                 }
- 
-             }
- 
-             .hours{
+                }
+
+                >div:last-child{
+                    margin-right: -45px;
+                }
+
+            }
+
+            .hours{
 
                 display: flex;
                 justify-content: space-between;
@@ -585,8 +551,8 @@
                 }
 
             }
- 
-         }
+
+        }
          
      }
 
@@ -596,14 +562,10 @@
         background:$violet;
         border-radius: 17px;
 
-        @include breakpoint-up(medium){
-            grid-area:card5;
-            }
 
         @include breakpoint-up(large){
             grid-area:card5;
         }
- 
          
          .image{
              
@@ -619,41 +581,47 @@
          }
  
          .detail{
-             background: $darkBlue;
-             border-radius: 15px;
-             padding: 2rem 3.5rem;
-             font-family: monospace;
-             font-size: 15px;
-             font-weight: 500;
- 
-             .work{
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
+            background: $darkBlue;
+            border-radius: 15px;
+            padding: 2rem 3rem;
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: 500;
 
-                 @include breakpoint-up(large){
+            @include breakpoint-up(large){
+                padding: 2rem 4.5rem;
+             }
+ 
+
+            .work{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @include breakpoint-up(large){
                     margin-bottom:20px;
                 }
                 
- 
-                 > div:first-child{
-                     font-size: 20px;
-                     font-weight: bolder;
-                     margin-left: -35px;
 
-                     @include breakpoint-up(large){
+
+                > div:first-child{
+                    font-size: 20px;
+                    font-weight: bolder;
+                    margin-left: -35px;
+
+                    @include breakpoint-up(large){
                         font-size: 15px;
                         font-weight:200;  
                     }
-                 }
- 
-                 >div:last-child{
-                     margin-right: -45px;
-                 }
- 
-             }
- 
-             .hours{
+                }
+
+                >div:last-child{
+                    margin-right: -45px;
+                }
+
+            }
+
+            .hours{
 
                 display: flex;
                 justify-content: space-between;
@@ -669,8 +637,6 @@
                     font-size: 25px;
                     font-weight: 400;
                     margin-left: -35px;
-
-                    
                 }
 
                 >div:last-child{
@@ -687,11 +653,10 @@
                 }
 
             }
- 
-         }
+
+        }
          
      }
-
      
      &__card6{
 
@@ -699,9 +664,6 @@
         background:$softOrange;
         border-radius: 17px;
 
-        @include breakpoint-up(medium){
-            grid-area:card6;
-            }
 
         @include breakpoint-up(large){
             grid-area:card6;
@@ -720,48 +682,49 @@
             }
  
          }
- 
+        
+         
          .detail{
-             background: $darkBlue;
-             border-radius: 15px;
-             padding: 2rem 3.5rem;
-             font-family: monospace;
-             font-size: 13px;
-             font-weight: 500;
+            background: $darkBlue;
+            border-radius: 15px;
+            padding: 2rem 3rem;
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: 500;
 
-             @include breakpoint-up(large){
-                padding: 2rem 5.4rem;
+            @include breakpoint-up(large){
+                padding: 2rem 4.5rem;
              }
  
-             .work{
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
 
-                 @include breakpoint-up(large){
+            .work{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @include breakpoint-up(large){
                     margin-bottom:20px;
                 }
                 
- 
-                 > div:first-child{
-                     font-size: 20px;
-                     font-weight: bolder;
-                     margin-left: -45px;
 
-                     @include breakpoint-up(large){
+                > div:first-child{
+                    font-size: 17px;
+                    font-weight: bolder;
+                    margin-left: -45px;
+
+                    @include breakpoint-up(large){
                         font-size: 15px;
                         font-weight:200;  
                     }
+                }
 
-                 }
- 
-                 >div:last-child{
-                     margin-right: -45px;
-                 }
- 
-             }
- 
-             .hours{
+                >div:last-child{
+                    margin-right: -65px;
+                }
+
+            }
+
+            .hours{
 
                 display: flex;
                 justify-content: space-between;
@@ -793,9 +756,8 @@
                 }
 
             }
- 
-         }
-         
+
+        }
      }
 
 }

@@ -17,7 +17,7 @@ async function fetchData() {
             for(let i=0; i<data.length; i++){
 
                 hours[i].textContent = data[i].timeframes.daily.current + (data[i].timeframes.daily.current > 1 ? "hrs" : "hr");
-                durations[i].textContent = "Yesterday - " + data[i].timeframes.daily.previous + (data[i].timeframes.daily.previous > 1 ? "hrs" : "hr");
+                durations[i].textContent = "Yesterday-" + data[i].timeframes.daily.previous + (data[i].timeframes.daily.previous > 1 ? "hrs" : "hr");
             }active(monthly, weekly, daily);
         })
 
