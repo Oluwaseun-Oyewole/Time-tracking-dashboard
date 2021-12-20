@@ -6,9 +6,6 @@
 
     @include breakpoint-up(large){
         width:100%;
-        // max-width:2440px;
-        // max-width:500px;
-        // margin: 0 auto;
     }
 
     .container{   
@@ -110,10 +107,10 @@
             grid-template-columns: repeat(3, 1fr);
             font-family: monospace;
             font-size: 15px;
-
+            
             
             @include breakpoint-up(large){
-                display:inline;
+                display:block;
                 font-size: 20px;
                 
             }
@@ -131,6 +128,7 @@
 
             > div:first-child{
                 color: $PaleBlue;
+               
             }
 
             > div:nth-child(2){

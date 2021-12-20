@@ -162,7 +162,7 @@ body {
 
 @media (min-width: 64em) {
   .section__card .menu {
-    display: inline;
+    display: block;
     font-size: 20px;
   }
 }
